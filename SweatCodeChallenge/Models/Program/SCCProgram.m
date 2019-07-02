@@ -66,6 +66,7 @@ NSString *const kSCCProgramTrainer = @"trainer";
 	if(![dictionary[kSCCProgramTrainer] isKindOfClass:[NSNull class]]){
 		self.trainer = [[SCCTrainer alloc] initWithDictionary:dictionary[kSCCProgramTrainer]];
 	}
+    
 
 	return self;
 }

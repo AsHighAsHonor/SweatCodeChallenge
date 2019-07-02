@@ -22,14 +22,17 @@
 		CB56EF8A22C9B89600871C01 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EF7E22C9B89600871C01 /* MASConstraint.m */; };
 		CB56EF8B22C9B89600871C01 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EF8022C9B89600871C01 /* MASViewConstraint.m */; };
 		CB56EF8C22C9B89600871C01 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EF8122C9B89600871C01 /* MASViewAttribute.m */; };
-		CB56EFB022C9E78F00871C01 /* SCCTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB56EFAD22C9E78F00871C01 /* SCCTableViewCell.xib */; };
-		CB56EFB322C9E82900871C01 /* SCCTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EFB122C9E82800871C01 /* SCCTableViewCell.m */; };
 		CB56EFB822C9F29F00871C01 /* UIView+Load.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EFB722C9F29F00871C01 /* UIView+Load.m */; };
 		CB56F06C22CAE23C00871C01 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB56F06B22CAE23C00871C01 /* SDWebImage.framework */; };
 		CB56F06D22CAE24B00871C01 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB56F06B22CAE23C00871C01 /* SDWebImage.framework */; };
 		CB56F06E22CAE24B00871C01 /* SDWebImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB56F06B22CAE23C00871C01 /* SDWebImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB56F07122CAEB0F00871C01 /* SCCAttributeView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56F07022CAEB0F00871C01 /* SCCAttributeView.m */; };
 		CB56F07322CAEB2A00871C01 /* SCCAttributeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB56F07222CAEB2A00871C01 /* SCCAttributeView.xib */; };
+		CB56F07722CAFACF00871C01 /* SCCProgramDynamicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56F07522CAFACF00871C01 /* SCCProgramDynamicCell.m */; };
+		CB56F07822CAFACF00871C01 /* SCCProgramDynamicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB56F07622CAFACF00871C01 /* SCCProgramDynamicCell.xib */; };
+		CB56F08022CB126B00871C01 /* DropsView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56F07F22CB126B00871C01 /* DropsView.m */; };
+		CB6C6CF522CB3BCF00E6AB71 /* TTGTagCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6C6CF222CB3BCE00E6AB71 /* TTGTagCollectionView.m */; };
+		CB6C6CF622CB3BCF00E6AB71 /* TTGTextTagCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6C6CF322CB3BCE00E6AB71 /* TTGTextTagCollectionView.m */; };
 		E15767DF22C9933F00843E97 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E15767DE22C9933F00843E97 /* AppDelegate.m */; };
 		E15767E722C9934000843E97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E15767E622C9934000843E97 /* Assets.xcassets */; };
 		E15767EA22C9934000843E97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E15767E822C9934000843E97 /* LaunchScreen.storyboard */; };
@@ -97,9 +100,6 @@
 		CB56EF8022C9B89600871C01 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
 		CB56EF8122C9B89600871C01 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
 		CB56EF8222C9B89600871C01 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CB56EFAD22C9E78F00871C01 /* SCCTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCCTableViewCell.xib; sourceTree = "<group>"; };
-		CB56EFB122C9E82800871C01 /* SCCTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCTableViewCell.m; sourceTree = "<group>"; };
-		CB56EFB222C9E82900871C01 /* SCCTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCCTableViewCell.h; sourceTree = "<group>"; };
 		CB56EFB522C9EA1700871C01 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		CB56EFB622C9F29F00871C01 /* UIView+Load.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Load.h"; sourceTree = "<group>"; };
 		CB56EFB722C9F29F00871C01 /* UIView+Load.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Load.m"; sourceTree = "<group>"; };
@@ -107,6 +107,15 @@
 		CB56F06F22CAEB0F00871C01 /* SCCAttributeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCCAttributeView.h; sourceTree = "<group>"; };
 		CB56F07022CAEB0F00871C01 /* SCCAttributeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCCAttributeView.m; sourceTree = "<group>"; };
 		CB56F07222CAEB2A00871C01 /* SCCAttributeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SCCAttributeView.xib; sourceTree = "<group>"; };
+		CB56F07422CAFACF00871C01 /* SCCProgramDynamicCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCCProgramDynamicCell.h; sourceTree = "<group>"; };
+		CB56F07522CAFACF00871C01 /* SCCProgramDynamicCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCCProgramDynamicCell.m; sourceTree = "<group>"; };
+		CB56F07622CAFACF00871C01 /* SCCProgramDynamicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SCCProgramDynamicCell.xib; sourceTree = "<group>"; };
+		CB56F07E22CB126B00871C01 /* DropsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropsView.h; sourceTree = "<group>"; };
+		CB56F07F22CB126B00871C01 /* DropsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DropsView.m; sourceTree = "<group>"; };
+		CB6C6CEF22CB3BCE00E6AB71 /* TTGTagCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTGTagCollectionView.h; sourceTree = "<group>"; };
+		CB6C6CF122CB3BCE00E6AB71 /* TTGTextTagCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTGTextTagCollectionView.h; sourceTree = "<group>"; };
+		CB6C6CF222CB3BCE00E6AB71 /* TTGTagCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGTagCollectionView.m; sourceTree = "<group>"; };
+		CB6C6CF322CB3BCE00E6AB71 /* TTGTextTagCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGTextTagCollectionView.m; sourceTree = "<group>"; };
 		E15767DA22C9933F00843E97 /* SweatCodeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SweatCodeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E15767DD22C9933F00843E97 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E15767DE22C9933F00843E97 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -157,12 +166,14 @@
 		CB56EF5422C9AE8D00871C01 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CB56EFAD22C9E78F00871C01 /* SCCTableViewCell.xib */,
-				CB56EFB222C9E82900871C01 /* SCCTableViewCell.h */,
-				CB56EFB122C9E82800871C01 /* SCCTableViewCell.m */,
 				CB56F06F22CAEB0F00871C01 /* SCCAttributeView.h */,
 				CB56F07022CAEB0F00871C01 /* SCCAttributeView.m */,
 				CB56F07222CAEB2A00871C01 /* SCCAttributeView.xib */,
+				CB56F07422CAFACF00871C01 /* SCCProgramDynamicCell.h */,
+				CB56F07522CAFACF00871C01 /* SCCProgramDynamicCell.m */,
+				CB56F07622CAFACF00871C01 /* SCCProgramDynamicCell.xib */,
+				CB56F07E22CB126B00871C01 /* DropsView.h */,
+				CB56F07F22CB126B00871C01 /* DropsView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -185,6 +196,7 @@
 		CB56EF6722C9B87B00871C01 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				CB6C6CEE22CB3BCE00E6AB71 /* TTGTagCollectionView */,
 				CB56F06B22CAE23C00871C01 /* SDWebImage.framework */,
 				CB56EF6822C9B89600871C01 /* Masonry */,
 			);
@@ -222,6 +234,17 @@
 				CB56EF8222C9B89600871C01 /* Info.plist */,
 			);
 			path = Masonry;
+			sourceTree = "<group>";
+		};
+		CB6C6CEE22CB3BCE00E6AB71 /* TTGTagCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				CB6C6CEF22CB3BCE00E6AB71 /* TTGTagCollectionView.h */,
+				CB6C6CF122CB3BCE00E6AB71 /* TTGTextTagCollectionView.h */,
+				CB6C6CF222CB3BCE00E6AB71 /* TTGTagCollectionView.m */,
+				CB6C6CF322CB3BCE00E6AB71 /* TTGTextTagCollectionView.m */,
+			);
+			path = TTGTagCollectionView;
 			sourceTree = "<group>";
 		};
 		E15767D122C9933F00843E97 = {
@@ -380,7 +403,7 @@
 				E15767EA22C9934000843E97 /* LaunchScreen.storyboard in Resources */,
 				E15767E722C9934000843E97 /* Assets.xcassets in Resources */,
 				E157680022C996B000843E97 /* OpenSans-Bold.ttf in Resources */,
-				CB56EFB022C9E78F00871C01 /* SCCTableViewCell.xib in Resources */,
+				CB56F07822CAFACF00871C01 /* SCCProgramDynamicCell.xib in Resources */,
 				E15767FF22C996B000843E97 /* Montserrat-Bold.ttf in Resources */,
 				CB56F07322CAEB2A00871C01 /* SCCAttributeView.xib in Resources */,
 				E157680A22C99CE700843E97 /* trainer-programs.json in Resources */,
@@ -416,6 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB56EF6522C9AFBC00871C01 /* SCCProgram.m in Sources */,
+				CB56F08022CB126B00871C01 /* DropsView.m in Sources */,
 				CB56EF8B22C9B89600871C01 /* MASViewConstraint.m in Sources */,
 				CB56EF8822C9B89600871C01 /* NSArray+MASAdditions.m in Sources */,
 				E157680822C99C1300843E97 /* SCCProgramSuggestionsListViewController.m in Sources */,
@@ -423,15 +447,17 @@
 				CB56EF8C22C9B89600871C01 /* MASViewAttribute.m in Sources */,
 				CB56EF6322C9AFBC00871C01 /* SCCTag.m in Sources */,
 				CB56EF8A22C9B89600871C01 /* MASConstraint.m in Sources */,
+				CB56F07722CAFACF00871C01 /* SCCProgramDynamicCell.m in Sources */,
 				CB56EF6422C9AFBC00871C01 /* SCCTrainer.m in Sources */,
 				CB56EF6622C9AFBC00871C01 /* SCCAttribute.m in Sources */,
 				CB56EF8922C9B89600871C01 /* View+MASAdditions.m in Sources */,
-				CB56EFB322C9E82900871C01 /* SCCTableViewCell.m in Sources */,
 				CB56EFB822C9F29F00871C01 /* UIView+Load.m in Sources */,
 				CB56EF8622C9B89600871C01 /* MASConstraintMaker.m in Sources */,
 				CB56EF5222C9ADCA00871C01 /* NSDictionary+Json.m in Sources */,
 				CB56F07122CAEB0F00871C01 /* SCCAttributeView.m in Sources */,
 				E157680522C9985000843E97 /* UIFont+Custom.m in Sources */,
+				CB6C6CF522CB3BCF00E6AB71 /* TTGTagCollectionView.m in Sources */,
+				CB6C6CF622CB3BCF00E6AB71 /* TTGTextTagCollectionView.m in Sources */,
 				CB56EF8322C9B89600871C01 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				E157680E22C9A0BE00843E97 /* GlobalMacro.m in Sources */,
 				CB56EF8422C9B89600871C01 /* ViewController+MASAdditions.m in Sources */,

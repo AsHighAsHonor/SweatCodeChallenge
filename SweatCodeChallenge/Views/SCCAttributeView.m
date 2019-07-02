@@ -10,6 +10,7 @@
 #import "SCCAttribute.h"
 
 
+
 @interface SCCAttributeView()
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UIProgressView *progressView;

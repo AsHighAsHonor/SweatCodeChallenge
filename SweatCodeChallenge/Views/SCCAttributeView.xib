@@ -42,6 +42,7 @@
                 <constraint firstItem="ios-AO-AWP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ERE-ro-hPK"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ios-AO-AWP" secondAttribute="trailing" id="IQe-yr-zaf"/>
                 <constraint firstItem="gSy-Bh-sbn" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Ppj-gJ-OkF"/>
+                <constraint firstItem="gSy-Bh-sbn" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="2.5" id="YMk-HR-wlI"/>
                 <constraint firstItem="ios-AO-AWP" firstAttribute="top" secondItem="gSy-Bh-sbn" secondAttribute="bottom" constant="5" id="jVW-ll-rY1"/>
                 <constraint firstItem="ios-AO-AWP" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="odZ-Dv-dnW"/>
             </constraints>

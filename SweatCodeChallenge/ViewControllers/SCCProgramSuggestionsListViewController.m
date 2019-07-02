@@ -7,12 +7,11 @@
 //
 
 #import "SCCProgramSuggestionsListViewController.h"
-#import "SCCTableViewCell.h"
 #import "SCCAttribute.h"
 #import "SCCTag.h"
 #import "SCCTrainer.h"
 #import "SCCProgram.h"
-#import "SCCTableViewCell.h"
+#import "SCCProgramDynamicCell.h"
 
 @interface SCCProgramSuggestionsListViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) UITableView *tableView;
@@ -20,32 +19,6 @@
 @end
 
 @implementation SCCProgramSuggestionsListViewController
-    
-- (UITableView *)tableView {
-    if (!_tableView) {
-        _tableView = [[UITableView alloc] init];
-        _tableView.separatorColor = UIColor.clearColor;
-        _tableView.showsVerticalScrollIndicator = NO;
-        [self.view addSubview:_tableView];
-        [_tableView makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.equalTo(self.view);
-        }];
-    }
-    return _tableView;
-}
-
-
--(NSMutableArray *)programs{
-    if(!_programs){
-        _programs  = [NSMutableArray array];
-        NSArray * dicts = [NSDictionary readLocalFileWithName:@"trainer-programs"];
-        for (NSDictionary * dict in dicts) {
-            SCCProgram *program = [[SCCProgram alloc]initWithDictionary:dict];
-            [_programs addObject:program];
-        }
-    }
-    return _programs;
-}
 
 
 - (void)viewDidLoad {
@@ -66,9 +39,9 @@
     self.tableView.tableHeaderView = [self tableViewHeaderViewWithTitle:@"Program Suggestions"];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
-    self.tableView.estimatedRowHeight = 300;
+    self.tableView.estimatedRowHeight = 100;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
-    [self.tableView registerNib:SCCTableViewCell.getNib forCellReuseIdentifier:SCCTableViewCell.reusedIdentifier];
+    [self.tableView registerNib:SCCProgramDynamicCell.getNib forCellReuseIdentifier:SCCProgramDynamicCell.reusedIdentifier];
 }
     
 #pragma mark - UITableViewDataSource, UITableViewDelegate
@@ -77,7 +50,7 @@
 }
     
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    SCCTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:SCCTableViewCell.reusedIdentifier];
+    SCCProgramDynamicCell * cell = [tableView dequeueReusableCellWithIdentifier:SCCProgramDynamicCell.reusedIdentifier];
     [cell setupCell:self.programs[indexPath.row]];
     return cell;
 }
@@ -93,6 +66,39 @@
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, CGRectGetMaxY(label.frame) + 5)];
     [headerView addSubview:label];
     return headerView;
+}
+
+
+
+- (UITableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] init];
+        _tableView.separatorColor = UIColor.clearColor;
+        _tableView.showsVerticalScrollIndicator = NO;
+        [self.view addSubview:_tableView];
+        [_tableView makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(self.view);
+        }];
+    }
+    return _tableView;
+}
+
+
+-(NSMutableArray *)programs{
+    if(!_programs){
+        _programs  = [NSMutableArray array];
+        NSArray * dicts = [NSDictionary readLocalFileWithName:@"trainer-programs"];
+        for (NSDictionary * dict in dicts) {
+            SCCProgram *program = [[SCCProgram alloc]initWithDictionary:dict];
+            NSMutableArray *tagNames = [NSMutableArray array];
+            for (SCCTag* tag in program.tags) {
+                [tagNames addObject:tag.name];
+            }
+            program.tagNames = tagNames;
+            [_programs addObject:program];
+        }
+    }
+    return _programs;
 }
 
 @end

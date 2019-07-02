@@ -21,6 +21,8 @@
 @property (nonatomic, strong) NSString * name;
 @property (nonatomic, strong) NSArray<SCCTag*> * tags;
 @property (nonatomic, strong) SCCTrainer * trainer;
+@property (nonatomic, strong)NSMutableArray *tagNames;
+
 
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary;
 

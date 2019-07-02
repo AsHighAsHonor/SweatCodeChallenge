@@ -33,12 +33,13 @@
 
     self.layer.masksToBounds = NO;
     self.layer.shadowOffset = CGSizeMake(0, 3);
-    self.layer.shadowOpacity = 0.3;
+    self.layer.shadowOpacity = 0.8;
     self.layer.shadowRadius = 5;
     self.layer.shadowColor = color.CGColor;
     self.layer.cornerRadius = 12;
     self.layer.borderWidth = 0.5;
     self.layer.borderColor = color.CGColor;
+  
 
 }
 
@@ -48,14 +49,18 @@
     self.layer.shadowOpacity = shadowOpacity;
     self.layer.shadowRadius =  shadowRadius;
     self.layer.shadowOffset = CGSizeZero;
+    self.layer.cornerRadius = 12;
+    self.layer.borderWidth = 0.5;
+    self.layer.borderColor = shadowColor.CGColor;
     CGRect shadowRect;
     CGFloat originX = 0;
     CGFloat originY = 0;
     CGFloat originW = self.bounds.size.width;
     CGFloat originH = self.bounds.size.height;
-    shadowRect  = CGRectMake(originX - shadowPathWidth/2, originY - shadowPathWidth/2, originW +  shadowPathWidth, originH + shadowPathWidth);
+    shadowRect  = CGRectMake(originX, originH -shadowPathWidth/2, originW, shadowPathWidth);
     UIBezierPath *path =[UIBezierPath bezierPathWithRect:shadowRect];
     self.layer.shadowPath = path.CGPath;
+
     
 }
 

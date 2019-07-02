@@ -14,7 +14,6 @@
 @property (nonatomic, strong) NSString * name;
 @property (nonatomic, strong) NSString * total;
 @property (nonatomic, strong) NSString * value;
-
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 -(NSDictionary *)toDictionary;
