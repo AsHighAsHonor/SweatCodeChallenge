@@ -58,16 +58,13 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
-    [self.containerView.layer setCornerRadius:12];
-    self.containerView.layer.borderWidth = 0.5;
-    self.containerView.layer.borderColor = CELL_SPE_COLOUR.CGColor;
-    [self.containerView addShadowPathWith:SCC_GRAY shadowOpacity:0.3 shadowRadius:9 shadowPathWidth:5];
+    [self.containerView addShadowWithColor:SCC_BORDER_GRAY];
     
     for (UIProgressView * bar in self.progressBars) {
         [bar.layer setCornerRadius:4];
         [bar.layer setMasksToBounds:YES];
         bar.layer.borderWidth = 0.5;
-        bar.layer.borderColor = CELL_SPE_COLOUR.CGColor;
+        bar.layer.borderColor = SCC_BORDER_GRAY.CGColor;
         [bar.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             obj.layer.masksToBounds = YES;
             obj.layer.cornerRadius = 4;
@@ -77,7 +74,7 @@
         [tag.layer setCornerRadius:4];
         [tag.layer setMasksToBounds:YES];
         tag.layer.borderWidth = 0.5;
-        tag.layer.borderColor = CELL_SPE_COLOUR.CGColor;
+        tag.layer.borderColor = SCC_BORDER_GRAY.CGColor;
     }
 
     

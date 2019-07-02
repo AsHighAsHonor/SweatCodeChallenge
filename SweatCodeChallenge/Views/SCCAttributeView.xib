@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SCCAttributeView">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="35"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intensity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSy-Bh-sbn">
+                    <rect key="frame" x="0.0" y="2.5" width="56.5" height="19.5"/>
+                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ios-AO-AWP">
+                    <rect key="frame" x="0.0" y="27" width="414" height="8"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="8" id="tcd-Ot-HvG"/>
+                    </constraints>
+                    <color key="progressTintColor" red="0.97254901959999995" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </progressView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ios-AO-AWP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ERE-ro-hPK"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ios-AO-AWP" secondAttribute="trailing" id="IQe-yr-zaf"/>
+                <constraint firstItem="gSy-Bh-sbn" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Ppj-gJ-OkF"/>
+                <constraint firstItem="ios-AO-AWP" firstAttribute="top" secondItem="gSy-Bh-sbn" secondAttribute="bottom" constant="5" id="jVW-ll-rY1"/>
+                <constraint firstItem="ios-AO-AWP" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="odZ-Dv-dnW"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="nameLabel" destination="gSy-Bh-sbn" id="2YC-cr-DWv"/>
+                <outlet property="progressView" destination="ios-AO-AWP" id="jcm-fH-y0I"/>
+            </connections>
+            <point key="canvasLocation" x="131.19999999999999" y="-51.724137931034484"/>
+        </view>
+    </objects>
+</document>

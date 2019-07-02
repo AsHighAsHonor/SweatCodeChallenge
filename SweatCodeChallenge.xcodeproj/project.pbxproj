@@ -28,6 +28,8 @@
 		CB56F06C22CAE23C00871C01 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB56F06B22CAE23C00871C01 /* SDWebImage.framework */; };
 		CB56F06D22CAE24B00871C01 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB56F06B22CAE23C00871C01 /* SDWebImage.framework */; };
 		CB56F06E22CAE24B00871C01 /* SDWebImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB56F06B22CAE23C00871C01 /* SDWebImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CB56F07122CAEB0F00871C01 /* SCCAttributeView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56F07022CAEB0F00871C01 /* SCCAttributeView.m */; };
+		CB56F07322CAEB2A00871C01 /* SCCAttributeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB56F07222CAEB2A00871C01 /* SCCAttributeView.xib */; };
 		E15767DF22C9933F00843E97 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E15767DE22C9933F00843E97 /* AppDelegate.m */; };
 		E15767E722C9934000843E97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E15767E622C9934000843E97 /* Assets.xcassets */; };
 		E15767EA22C9934000843E97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E15767E822C9934000843E97 /* LaunchScreen.storyboard */; };
@@ -102,6 +104,9 @@
 		CB56EFB622C9F29F00871C01 /* UIView+Load.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Load.h"; sourceTree = "<group>"; };
 		CB56EFB722C9F29F00871C01 /* UIView+Load.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Load.m"; sourceTree = "<group>"; };
 		CB56F06B22CAE23C00871C01 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = "<group>"; };
+		CB56F06F22CAEB0F00871C01 /* SCCAttributeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCCAttributeView.h; sourceTree = "<group>"; };
+		CB56F07022CAEB0F00871C01 /* SCCAttributeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCCAttributeView.m; sourceTree = "<group>"; };
+		CB56F07222CAEB2A00871C01 /* SCCAttributeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SCCAttributeView.xib; sourceTree = "<group>"; };
 		E15767DA22C9933F00843E97 /* SweatCodeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SweatCodeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E15767DD22C9933F00843E97 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E15767DE22C9933F00843E97 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -155,6 +160,9 @@
 				CB56EFAD22C9E78F00871C01 /* SCCTableViewCell.xib */,
 				CB56EFB222C9E82900871C01 /* SCCTableViewCell.h */,
 				CB56EFB122C9E82800871C01 /* SCCTableViewCell.m */,
+				CB56F06F22CAEB0F00871C01 /* SCCAttributeView.h */,
+				CB56F07022CAEB0F00871C01 /* SCCAttributeView.m */,
+				CB56F07222CAEB2A00871C01 /* SCCAttributeView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -374,6 +382,7 @@
 				E157680022C996B000843E97 /* OpenSans-Bold.ttf in Resources */,
 				CB56EFB022C9E78F00871C01 /* SCCTableViewCell.xib in Resources */,
 				E15767FF22C996B000843E97 /* Montserrat-Bold.ttf in Resources */,
+				CB56F07322CAEB2A00871C01 /* SCCAttributeView.xib in Resources */,
 				E157680A22C99CE700843E97 /* trainer-programs.json in Resources */,
 				E157680122C996B000843E97 /* OpenSans-Semibold.ttf in Resources */,
 			);
@@ -421,6 +430,7 @@
 				CB56EFB822C9F29F00871C01 /* UIView+Load.m in Sources */,
 				CB56EF8622C9B89600871C01 /* MASConstraintMaker.m in Sources */,
 				CB56EF5222C9ADCA00871C01 /* NSDictionary+Json.m in Sources */,
+				CB56F07122CAEB0F00871C01 /* SCCAttributeView.m in Sources */,
 				E157680522C9985000843E97 /* UIFont+Custom.m in Sources */,
 				CB56EF8322C9B89600871C01 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				E157680E22C9A0BE00843E97 /* GlobalMacro.m in Sources */,

@@ -32,11 +32,11 @@
 - (void)addShadowWithColor:(UIColor *)color {
 
     self.layer.masksToBounds = NO;
-    self.layer.shadowOffset = CGSizeMake(0, 5);
+    self.layer.shadowOffset = CGSizeMake(0, 3);
     self.layer.shadowOpacity = 0.3;
     self.layer.shadowRadius = 5;
     self.layer.shadowColor = color.CGColor;
-    self.layer.cornerRadius = 10;
+    self.layer.cornerRadius = 12;
     self.layer.borderWidth = 0.5;
     self.layer.borderColor = color.CGColor;
 
@@ -58,6 +58,7 @@
     self.layer.shadowPath = path.CGPath;
     
 }
+
 
 
 

@@ -25,6 +25,7 @@
     if (!_tableView) {
         _tableView = [[UITableView alloc] init];
         _tableView.separatorColor = UIColor.clearColor;
+        _tableView.showsVerticalScrollIndicator = NO;
         [self.view addSubview:_tableView];
         [_tableView makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self.view);
@@ -54,7 +55,7 @@
 }
     
 - (void)initProperties {
-    UIImageView *logoImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 78, 44)];
+    UIImageView *logoImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 105, 44)];
     logoImageView.contentMode = UIViewContentModeScaleAspectFit;
     logoImageView.image = [UIImage imageNamed:@"sweat-logo"];
     self.navigationItem.titleView = logoImageView;

@@ -17,5 +17,8 @@
 
 #define SCC_GRAY [UIColor lightGrayColor]
 #define CELL_SPE_COLOUR [UIColor colorWithHexString:@"C8C7CC"]
+#define SCC_TEXT_GRAY [UIColor colorWithHexString:@"8A8A8A"]
+#define SCC_BORDER_GRAY [UIColor colorWithHexString:@"BBBBBB"]
+#define SCC_PINK [UIColor colorWithHexString:@"F8006F"]
 
 @end
