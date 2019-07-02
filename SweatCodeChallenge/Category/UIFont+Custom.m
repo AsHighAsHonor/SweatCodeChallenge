@@ -21,5 +21,10 @@
 + (instancetype)openSansSemiboldWithSize:(CGFloat)size {
     return [UIFont fontWithName:@"OpenSans-Semibold" size:size];
 }
+
+
++ (instancetype)openSansSemiRegularWithSize:(CGFloat)size {
+    return [UIFont fontWithName:@"OpenSans-Regular" size:size];
+}
     
 @end

@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@class SCCProgram;
+
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SCCTableViewCell : UITableViewCell
-
+-(void)setupCell:(SCCProgram *)program;
 @end
 
 NS_ASSUME_NONNULL_END

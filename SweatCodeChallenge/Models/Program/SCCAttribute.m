@@ -1,6 +1,10 @@
 //
-//	SCCAttribute.m
-//	https://ashighashonor.github.io
+//
+//  SweatCodeChallenge
+//
+//  Created by YYang1 on 1/7/19.
+//  Copyright © 2019 PixelForce Systems. All rights reserved.
+//
 
 
 

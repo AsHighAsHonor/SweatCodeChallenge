@@ -7,21 +7,45 @@
 //
 
 #import "SCCProgramSuggestionsListViewController.h"
+#import "SCCTableViewCell.h"
+#import "SCCAttribute.h"
+#import "SCCTag.h"
+#import "SCCTrainer.h"
+#import "SCCProgram.h"
+#import "SCCTableViewCell.h"
 
 @interface SCCProgramSuggestionsListViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) UITableView *tableView;
+@property (strong, nonatomic) NSMutableArray * programs;
 @end
 
 @implementation SCCProgramSuggestionsListViewController
     
 - (UITableView *)tableView {
-    if (_tableView == nil) {
-        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] init];
         _tableView.separatorColor = UIColor.clearColor;
         [self.view addSubview:_tableView];
+        [_tableView makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(self.view);
+        }];
     }
     return _tableView;
 }
+
+
+-(NSMutableArray *)programs{
+    if(!_programs){
+        _programs  = [NSMutableArray array];
+        NSArray * dicts = [NSDictionary readLocalFileWithName:@"trainer-programs"];
+        for (NSDictionary * dict in dicts) {
+            SCCProgram *program = [[SCCProgram alloc]initWithDictionary:dict];
+            [_programs addObject:program];
+        }
+    }
+    return _programs;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -41,21 +65,22 @@
     self.tableView.tableHeaderView = [self tableViewHeaderViewWithTitle:@"Program Suggestions"];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    self.tableView.estimatedRowHeight = 300;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    [self.tableView registerNib:SCCTableViewCell.getNib forCellReuseIdentifier:SCCTableViewCell.reusedIdentifier];
 }
     
 #pragma mark - UITableViewDataSource, UITableViewDelegate
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 0;
-}
-    
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return self.programs.count;
 }
     
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [[UITableViewCell alloc] init];
+    SCCTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:SCCTableViewCell.reusedIdentifier];
+    [cell setupCell:self.programs[indexPath.row]];
+    return cell;
 }
-    
+
 #pragma mark - Custom Methods
 - (UIView *)tableViewHeaderViewWithTitle:(NSString *)text {
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(18, 20, SCREEN_WIDTH - 36, 24)];
@@ -63,7 +88,8 @@
     label.font = [UIFont montserratBoldWithSize:20];
     label.numberOfLines = 0;
     label.text = text;
-    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 100)];
+    [label resizeWidthWithFixedHeight];
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, CGRectGetMaxY(label.frame) + 5)];
     [headerView addSubview:label];
     return headerView;
 }

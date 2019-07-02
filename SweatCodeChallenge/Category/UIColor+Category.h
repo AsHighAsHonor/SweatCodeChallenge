@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UIColor (Category)
-
++ (UIColor *)colorWithHexString:(NSString *)hexString;
 @end
 
 NS_ASSUME_NONNULL_END

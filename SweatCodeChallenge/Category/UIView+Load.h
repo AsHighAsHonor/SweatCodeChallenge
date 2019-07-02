@@ -10,8 +10,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIView (Load)
 
+
+@interface UIView (Load)
++ (instancetype)loadFromNib;
++ (instancetype)loadFromNibWith:(CGRect)frame;
++ (UINib *)getNib;
++ (NSString *)reusedIdentifier;
+
+- (void)addShadowWithColor:(UIColor *)theColor;
+-(void)addShadowPathWith:(UIColor *)shadowColor shadowOpacity:(CGFloat)shadowOpacity shadowRadius:(CGFloat)shadowRadius shadowPathWidth:(CGFloat)shadowPathWidth;
 @end
 
 NS_ASSUME_NONNULL_END

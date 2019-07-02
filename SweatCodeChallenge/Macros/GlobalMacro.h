@@ -13,5 +13,9 @@
     
 #define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
 #define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
+#define MAS_SHORTHAND
+
+#define SCC_GRAY [UIColor lightGrayColor]
+#define CELL_SPE_COLOUR [UIColor colorWithHexString:@"C8C7CC"]
 
 @end

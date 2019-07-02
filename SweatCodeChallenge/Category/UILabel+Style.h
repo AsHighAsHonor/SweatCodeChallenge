@@ -8,10 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
 
-@interface UILabel_Style : NSObject
+@interface UILabel(Style)
+
+- (void)resizeHeightWithFixedWidth;
+
+- (void)resizeWidthWithFixedHeight;
+    
+- (void)resizeHeightWithFixedWidthAndExtraHeight:(CGFloat)extraHeight;
+    
+- (void)resizeWidthWithFixedHeightAndExtraWidth:(CGFloat)extraWidth;
 
 @end
-
-NS_ASSUME_NONNULL_END
