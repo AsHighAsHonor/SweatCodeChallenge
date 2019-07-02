@@ -1,5 +1,5 @@
 //
-//  SCCNavigationController.h
+//  SCCProgramSuggestionsListViewController.h
 //  SweatCodeChallenge
 //
 //  Created by Alvin He on 1/7/19.
@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 
-@interface SCCNavigationController : UINavigationController
+@interface SCCProgramSuggestionsListViewController : UIViewController
 
 @end

@@ -1,14 +1,13 @@
 //
-//  SCCNavigationController.h
+//  UILabel+Style.m
 //  SweatCodeChallenge
 //
 //  Created by Alvin He on 1/7/19.
 //  Copyright © 2019 PixelForce Systems. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "UILabel+Style.h"
 
-
-@interface SCCNavigationController : UINavigationController
+@implementation UILabel_Style
 
 @end

@@ -1,14 +1,13 @@
 //
-//  SCCNavigationController.h
+//  GlobalMacro.m
 //  SweatCodeChallenge
 //
 //  Created by Alvin He on 1/7/19.
 //  Copyright © 2019 PixelForce Systems. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "GlobalMacro.h"
 
-
-@interface SCCNavigationController : UINavigationController
+@implementation GlobalMacro
 
 @end

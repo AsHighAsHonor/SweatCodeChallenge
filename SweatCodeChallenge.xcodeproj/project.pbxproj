@@ -12,6 +12,13 @@
 		E15767EA22C9934000843E97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E15767E822C9934000843E97 /* LaunchScreen.storyboard */; };
 		E15767ED22C9934000843E97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E15767EC22C9934000843E97 /* main.m */; };
 		E15767F922C9940900843E97 /* SCCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15767F822C9940900843E97 /* SCCNavigationController.m */; };
+		E15767FF22C996B000843E97 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E15767FC22C996B000843E97 /* Montserrat-Bold.ttf */; };
+		E157680022C996B000843E97 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E15767FD22C996B000843E97 /* OpenSans-Bold.ttf */; };
+		E157680122C996B000843E97 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E15767FE22C996B000843E97 /* OpenSans-Semibold.ttf */; };
+		E157680522C9985000843E97 /* UIFont+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = E157680422C9985000843E97 /* UIFont+Custom.m */; };
+		E157680822C99C1300843E97 /* SCCProgramSuggestionsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E157680722C99C1300843E97 /* SCCProgramSuggestionsListViewController.m */; };
+		E157680A22C99CE700843E97 /* trainer-programs.json in Resources */ = {isa = PBXBuildFile; fileRef = E157680922C99CE700843E97 /* trainer-programs.json */; };
+		E157680E22C9A0BE00843E97 /* GlobalMacro.m in Sources */ = {isa = PBXBuildFile; fileRef = E157680D22C9A0BE00843E97 /* GlobalMacro.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,17 @@
 		E15767EC22C9934000843E97 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E15767F722C9940900843E97 /* SCCNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCCNavigationController.h; sourceTree = "<group>"; };
 		E15767F822C9940900843E97 /* SCCNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCCNavigationController.m; sourceTree = "<group>"; };
+		E15767FC22C996B000843E97 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		E15767FD22C996B000843E97 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		E15767FE22C996B000843E97 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		E157680322C9985000843E97 /* UIFont+Custom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+Custom.h"; sourceTree = "<group>"; };
+		E157680422C9985000843E97 /* UIFont+Custom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Custom.m"; sourceTree = "<group>"; };
+		E157680622C99C1300843E97 /* SCCProgramSuggestionsListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCCProgramSuggestionsListViewController.h; sourceTree = "<group>"; };
+		E157680722C99C1300843E97 /* SCCProgramSuggestionsListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCCProgramSuggestionsListViewController.m; sourceTree = "<group>"; };
+		E157680922C99CE700843E97 /* trainer-programs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "trainer-programs.json"; sourceTree = "<group>"; };
+		E157680C22C9A0BE00843E97 /* GlobalMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlobalMacro.h; sourceTree = "<group>"; };
+		E157680D22C9A0BE00843E97 /* GlobalMacro.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlobalMacro.m; sourceTree = "<group>"; };
+		E157680F22C9A13400843E97 /* SweatCodeChallenge-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SweatCodeChallenge-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +76,10 @@
 			children = (
 				E15767DD22C9933F00843E97 /* AppDelegate.h */,
 				E15767DE22C9933F00843E97 /* AppDelegate.m */,
+				E157680B22C9A08D00843E97 /* Macros */,
+				E157680222C9982F00843E97 /* Category */,
 				E15767F522C9937500843E97 /* ViewControllers */,
+				E15767FB22C9969800843E97 /* Fonts */,
 				E15767F322C9935100843E97 /* Support Files */,
 			);
 			path = SweatCodeChallenge;
@@ -71,6 +92,8 @@
 				E15767E822C9934000843E97 /* LaunchScreen.storyboard */,
 				E15767EB22C9934000843E97 /* Info.plist */,
 				E15767EC22C9934000843E97 /* main.m */,
+				E157680922C99CE700843E97 /* trainer-programs.json */,
+				E157680F22C9A13400843E97 /* SweatCodeChallenge-Prefix.pch */,
 			);
 			name = "Support Files";
 			sourceTree = "<group>";
@@ -80,8 +103,38 @@
 			children = (
 				E15767F722C9940900843E97 /* SCCNavigationController.h */,
 				E15767F822C9940900843E97 /* SCCNavigationController.m */,
+				E157680622C99C1300843E97 /* SCCProgramSuggestionsListViewController.h */,
+				E157680722C99C1300843E97 /* SCCProgramSuggestionsListViewController.m */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E15767FB22C9969800843E97 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E15767FC22C996B000843E97 /* Montserrat-Bold.ttf */,
+				E15767FD22C996B000843E97 /* OpenSans-Bold.ttf */,
+				E15767FE22C996B000843E97 /* OpenSans-Semibold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		E157680222C9982F00843E97 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				E157680322C9985000843E97 /* UIFont+Custom.h */,
+				E157680422C9985000843E97 /* UIFont+Custom.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		E157680B22C9A08D00843E97 /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				E157680C22C9A0BE00843E97 /* GlobalMacro.h */,
+				E157680D22C9A0BE00843E97 /* GlobalMacro.m */,
+			);
+			path = Macros;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +197,10 @@
 			files = (
 				E15767EA22C9934000843E97 /* LaunchScreen.storyboard in Resources */,
 				E15767E722C9934000843E97 /* Assets.xcassets in Resources */,
+				E157680022C996B000843E97 /* OpenSans-Bold.ttf in Resources */,
+				E15767FF22C996B000843E97 /* Montserrat-Bold.ttf in Resources */,
+				E157680A22C99CE700843E97 /* trainer-programs.json in Resources */,
+				E157680122C996B000843E97 /* OpenSans-Semibold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,7 +231,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E157680822C99C1300843E97 /* SCCProgramSuggestionsListViewController.m in Sources */,
 				E15767ED22C9934000843E97 /* main.m in Sources */,
+				E157680522C9985000843E97 /* UIFont+Custom.m in Sources */,
+				E157680E22C9A0BE00843E97 /* GlobalMacro.m in Sources */,
 				E15767F922C9940900843E97 /* SCCNavigationController.m in Sources */,
 				E15767DF22C9933F00843E97 /* AppDelegate.m in Sources */,
 			);
@@ -312,6 +372,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y997Y6DWC6;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/SweatCodeChallenge/SweatCodeChallenge-Prefix.pch";
 				INFOPLIST_FILE = SweatCodeChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -329,6 +390,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y997Y6DWC6;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/SweatCodeChallenge/SweatCodeChallenge-Prefix.pch";
 				INFOPLIST_FILE = SweatCodeChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

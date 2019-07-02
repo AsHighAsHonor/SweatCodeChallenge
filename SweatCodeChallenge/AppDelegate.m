@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "SCCNavigationController.h"
+#import "SCCProgramSuggestionsListViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,8 +20,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [[SCCNavigationController alloc] init];
+    self.window.rootViewController = [[SCCNavigationController alloc] initWithRootViewController:[[SCCProgramSuggestionsListViewController alloc] init]];
     [self.window makeKeyAndVisible];
+    
+//    for (NSString *familyName in [UIFont familyNames]) {
+//        UIFont *font = [UIFont fontNamesForFamilyName:familyName];
+//        NSLog(familyName);
+//        NSLog(font.description);
+//        NSLog(@"----------------");
+//    }
     
     return YES;
 }
