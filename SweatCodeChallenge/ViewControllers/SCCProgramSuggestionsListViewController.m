@@ -20,7 +20,6 @@
 
 @implementation SCCProgramSuggestionsListViewController
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initProperties];

@@ -12,10 +12,11 @@
 @interface UIFont(Custom)
 
 + (instancetype)montserratBoldWithSize:(CGFloat)size;
-    
+
 + (instancetype)openSansBoldWithSize:(CGFloat)size;
 
 + (instancetype)openSansSemiboldWithSize:(CGFloat)size;
 
 + (instancetype)openSansSemiRegularWithSize:(CGFloat)size;
+
 @end

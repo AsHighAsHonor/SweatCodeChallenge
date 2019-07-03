@@ -8,10 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
 @class SCCProgram;
 @interface SCCProgramDynamicCell : UITableViewCell
--(void)setupCell:(SCCProgram *)program;
-@end
 
-NS_ASSUME_NONNULL_END
+- (void)setupCell:(SCCProgram *)program;
+
+@end

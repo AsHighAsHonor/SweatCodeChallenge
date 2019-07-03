@@ -19,7 +19,7 @@
 
 @implementation SCCAttributeView
 
-- (void)awakeFromNib{
+- (void)awakeFromNib {
     [super awakeFromNib];
     [self.progressView.layer setCornerRadius:4];
     [self.progressView.layer setMasksToBounds:YES];
@@ -36,7 +36,7 @@
     
 }
 
--(void)setupAttribute:(SCCAttribute*)attribute{
+-(void)setupAttribute:(SCCAttribute*)attribute {
     self.nameLabel.text = attribute.name;
     if (![NSString isBlankString:attribute.value] && ![NSString isBlankString:attribute.total]) {
         self.progressView.progress = attribute.value.doubleValue / attribute.total.doubleValue;
