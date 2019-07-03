@@ -70,7 +70,6 @@ static NSString *const IntensityCode = @"intensity";
         }];
         //Vernier use for add constraint to next view
         self.vernier = temp;
-        [self.attrViews addObject:temp];
     }
     
     [self.collectionView addTags: program.tagNames withConfig:self.config];
