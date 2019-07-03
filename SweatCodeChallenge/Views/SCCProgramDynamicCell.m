@@ -32,7 +32,6 @@ static NSString *const IntensityCode = @"intensity";
 
 @end
 
-
 @implementation SCCProgramDynamicCell
 
 - (void)awakeFromNib {
@@ -42,15 +41,14 @@ static NSString *const IntensityCode = @"intensity";
     self.collectionView.alignment = TTGTagCollectionAlignmentLeft;
     [self.frameView addShadowWithColor:SCC_BORDER_GRAY];
 }
--(void)prepareForReuse{
+- (void)prepareForReuse {
     [super prepareForReuse];
     self.vernier = nil;
     [self.containerView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     [self.collectionView removeAllTags];
 }
 
-
--(void)setupCell:(SCCProgram *)program{
+- (void)setupCell:(SCCProgram *)program {
     __weak __typeof(self)weakSelf = self;
     [self.trainerImageView sd_setImageWithURL:[NSURL URLWithString:program.trainer.imageUrl]];
     CGFloat height = 0;
@@ -88,16 +86,15 @@ static NSString *const IntensityCode = @"intensity";
     [self.contentView updateConstraintsIfNeeded];
 }
 
-
 #pragma mark - LazyProperty
--(NSMutableArray *)tags{
+- (NSMutableArray *)tags {
     if(!_tags){
         _tags  = [NSMutableArray array];
     }
     return _tags;
 }
 
--(TTGTextTagConfig *)config{
+- (TTGTextTagConfig *)config {
     if(!_config){
         _config  = [[TTGTextTagConfig alloc]init];
         _config.textFont = [UIFont openSansSemiboldWithSize:8];
@@ -110,7 +107,5 @@ static NSString *const IntensityCode = @"intensity";
     }
     return _config;
 }
-
-
 
 @end
