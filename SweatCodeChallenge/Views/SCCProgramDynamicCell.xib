@@ -41,9 +41,9 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6ak-cO-msk">
-                        <rect key="frame" x="150" y="33" width="140" height="258"/>
+                        <rect key="frame" x="150" y="50" width="140" height="260"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="258" id="bcC-EL-Scl"/>
+                            <constraint firstAttribute="height" constant="260" id="bcC-EL-Scl"/>
                             <constraint firstAttribute="width" constant="140" id="zNg-2B-Kle"/>
                         </constraints>
                     </imageView>
@@ -55,13 +55,14 @@
                     <constraint firstAttribute="trailing" secondItem="tB7-GL-moa" secondAttribute="trailing" constant="20" id="IAm-Vd-eom"/>
                     <constraint firstItem="Bj4-kh-j3K" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="33" id="UjK-cQ-HZd"/>
                     <constraint firstAttribute="bottom" secondItem="tB7-GL-moa" secondAttribute="bottom" id="XeT-A1-Ucb"/>
-                    <constraint firstItem="6ak-cO-msk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="33" id="hoP-Vm-P6Q"/>
+                    <constraint firstItem="6ak-cO-msk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="50" id="hoP-Vm-P6Q"/>
                     <constraint firstAttribute="trailing" secondItem="6ak-cO-msk" secondAttribute="trailing" constant="30" id="l3O-w7-Usi"/>
                     <constraint firstItem="tB7-GL-moa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="p10-bz-GCs"/>
                     <constraint firstItem="tB7-GL-moa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="vcb-gh-V0V"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
                 <outlet property="frameView" destination="tB7-GL-moa" id="yPQ-FQ-AiK"/>
                 <outlet property="programNameLabel" destination="Bj4-kh-j3K" id="a1C-3f-BDT"/>

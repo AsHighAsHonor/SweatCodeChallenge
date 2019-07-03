@@ -10,9 +10,9 @@
 #import "SCCAttribute.h"
 
 @interface DropsView()
-@property(nonatomic, strong)NSMutableArray *drops;
-@property(nonatomic, strong)UIImageView *veriner;
-@property(nonatomic, strong)SCCAttribute *attr;
+@property (nonatomic, strong) NSMutableArray *drops;
+@property (nonatomic, strong) UIImageView *veriner;
+@property (nonatomic, strong) SCCAttribute *attr;
 @end
 
 @implementation DropsView

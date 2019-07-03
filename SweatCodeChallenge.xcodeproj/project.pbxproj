@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB4847D422CC388400CC652A /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4847D322CC388400CC652A /* NSString+Category.m */; };
 		CB56EF5222C9ADCA00871C01 /* NSDictionary+Json.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EF5122C9ADCA00871C01 /* NSDictionary+Json.m */; };
 		CB56EF6322C9AFBC00871C01 /* SCCTag.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EF5B22C9AFBB00871C01 /* SCCTag.m */; };
 		CB56EF6422C9AFBC00871C01 /* SCCTrainer.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EF5F22C9AFBB00871C01 /* SCCTrainer.m */; };
@@ -64,6 +65,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CB4847D222CC388400CC652A /* NSString+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
+		CB4847D322CC388400CC652A /* NSString+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
 		CB56EF5022C9ADCA00871C01 /* NSDictionary+Json.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Json.h"; sourceTree = "<group>"; };
 		CB56EF5122C9ADCA00871C01 /* NSDictionary+Json.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Json.m"; sourceTree = "<group>"; };
 		CB56EF5B22C9AFBB00871C01 /* SCCTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCTag.m; sourceTree = "<group>"; };
@@ -328,6 +331,8 @@
 				CB56EFB722C9F29F00871C01 /* UIView+Load.m */,
 				FD79115F22CABF7900FDA763 /* UIColor+Category.h */,
 				FD79116022CABF7900FDA763 /* UIColor+Category.m */,
+				CB4847D222CC388400CC652A /* NSString+Category.h */,
+				CB4847D322CC388400CC652A /* NSString+Category.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -451,6 +456,7 @@
 				CB56EF6422C9AFBC00871C01 /* SCCTrainer.m in Sources */,
 				CB56EF6622C9AFBC00871C01 /* SCCAttribute.m in Sources */,
 				CB56EF8922C9B89600871C01 /* View+MASAdditions.m in Sources */,
+				CB4847D422CC388400CC652A /* NSString+Category.m in Sources */,
 				CB56EFB822C9F29F00871C01 /* UIView+Load.m in Sources */,
 				CB56EF8622C9B89600871C01 /* MASConstraintMaker.m in Sources */,
 				CB56EF5222C9ADCA00871C01 /* NSDictionary+Json.m in Sources */,

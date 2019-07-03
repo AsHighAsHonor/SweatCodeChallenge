@@ -16,19 +16,17 @@
 #import "TTGTextTagCollectionView.h"
 
 
+static NSString *const IntensityCode = @"intensity";
+
 @interface SCCProgramDynamicCell ()
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *trainerBottomConstraint;
+@property (nonatomic, strong) UIView *vernier;
 @property (weak, nonatomic) IBOutlet UIImageView *trainerImageView;
-@property(nonatomic, strong) DropsView *drop;
-@property(nonatomic, strong) SCCAttributeView * attrView;
-@property(nonatomic, strong)UIView *vernier;
 @property (weak, nonatomic) IBOutlet UILabel *programNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *trainerNameLabel;
 @property (weak, nonatomic) IBOutlet UIView *frameView;
-@property(nonatomic, strong)TTGTextTagCollectionView * collectionView;
-@property(nonatomic, strong)NSMutableArray <SCCTag *> *tags;
-@property(nonatomic, strong)TTGTextTagConfig *config;
-
+@property (nonatomic, strong) TTGTextTagCollectionView *collectionView;
+@property (nonatomic, strong) NSMutableArray <SCCTag *> *tags;
+@property (nonatomic, strong) TTGTextTagConfig *config;
 @end
 
 
@@ -37,10 +35,10 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     [self.frameView addShadowWithColor:SCC_BORDER_GRAY];
-    
 }
 -(void)prepareForReuse{
     [super prepareForReuse];
+    self.vernier = nil;
     [self.collectionView removeAllTags];
 }
 
@@ -52,12 +50,13 @@
     for (int i = 0 ; i< program.attributes.count; i++) {
         SCCAttribute * attr = program.attributes[i];
         UIView * temp;
-        if ([attr.codeName isEqualToString:@"intensity"]){
+        if ([attr.codeName isEqualToString:IntensityCode]){
             temp = [[DropsView alloc]initWithDropValue:attr];
         }else{
             temp  = SCCAttributeView.loadFromNib;
             [(SCCAttributeView* )temp setupAttribute: attr];
         }
+        
         [self.contentView addSubview:temp];
         [temp makeConstraints:^(MASConstraintMaker *make) {
             if (i == 0){
@@ -69,15 +68,15 @@
             make.right.equalTo(weakSelf.trainerImageView.mas_left).offset(0);
             
         }];
-        
+        //Vernier use for add constraint to next view
         self.vernier = temp;
     }
     
-    [self.contentView layoutIfNeeded];
     [self.collectionView addTags: program.tagNames withConfig:self.config];
-    [self.contentView layoutIfNeeded];
 }
 
+
+#pragma mark - LazyProperty
 
 -(TTGTextTagCollectionView *)collectionView{
     if(!_collectionView){
@@ -88,9 +87,9 @@
         _collectionView.alignment = TTGTagCollectionAlignmentFillByExpandingWidthExceptLastLine;
         [self.contentView addSubview:self.collectionView];
         [self.collectionView makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(weakSelf.vernier.bottom).offset(25);
+            make.top.equalTo(weakSelf.vernier.bottom).offset(15);
             make.left.equalTo(weakSelf.contentView).offset(36);
-            make.bottom.equalTo(weakSelf.contentView.bottom).offset(-25);
+            make.bottom.equalTo(weakSelf.contentView.bottom).offset(-15);
             make.right.equalTo(weakSelf.trainerImageView.left);
         }];
 
@@ -121,5 +120,6 @@
     }
     return _config;
 }
+
 
 @end
