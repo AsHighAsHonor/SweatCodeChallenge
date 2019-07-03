@@ -36,7 +36,7 @@
     self.layer.shadowOpacity = 0.8;
     self.layer.shadowRadius = 5;
     self.layer.shadowColor = color.CGColor;
-    self.layer.cornerRadius = 12;
+    self.layer.cornerRadius = 10;
     self.layer.borderWidth = 0.5;
     self.layer.borderColor = color.CGColor;
   

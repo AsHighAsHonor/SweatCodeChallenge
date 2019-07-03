@@ -15,7 +15,7 @@
 
 @interface SCCProgramSuggestionsListViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) UITableView *tableView;
-@property (strong, nonatomic) NSMutableArray * programs;
+@property (strong, nonatomic) NSMutableArray *programs;
 @end
 
 @implementation SCCProgramSuggestionsListViewController
@@ -26,6 +26,11 @@
     [self initProperties];
     [self setProperties];
 }
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self.tableView reloadData];
+
+}
     
 - (void)initProperties {
     UIImageView *logoImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 105, 44)];
@@ -33,7 +38,7 @@
     logoImageView.image = [UIImage imageNamed:@"sweat-logo"];
     self.navigationItem.titleView = logoImageView;
 }
-    
+
 - (void)setProperties {
     self.view.backgroundColor = UIColor.whiteColor;
     self.tableView.tableHeaderView = [self tableViewHeaderViewWithTitle:@"Program Suggestions"];
@@ -60,7 +65,6 @@
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(18, 20, SCREEN_WIDTH - 36, 24)];
     label.textAlignment = NSTextAlignmentLeft;
     label.font = [UIFont montserratBoldWithSize:20];
-    label.numberOfLines = 0;
     label.text = text;
     [label resizeWidthWithFixedHeight];
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, CGRectGetMaxY(label.frame) + 5)];
@@ -70,6 +74,7 @@
 
 
 
+#pragma mark - Property
 - (UITableView *)tableView {
     if (!_tableView) {
         _tableView = [[UITableView alloc] init];
@@ -86,7 +91,9 @@
 
 -(NSMutableArray *)programs{
     if(!_programs){
-        _programs  = [NSMutableArray array];
+        __weak __typeof(self)weakSelf = self;
+        // Simulate API call
+        weakSelf.programs  = [NSMutableArray array];
         NSArray * dicts = [NSDictionary readLocalFileWithName:@"trainer-programs"];
         for (NSDictionary * dict in dicts) {
             SCCProgram *program = [[SCCProgram alloc]initWithDictionary:dict];
@@ -95,8 +102,9 @@
                 [tagNames addObject:tag.name];
             }
             program.tagNames = tagNames;
-            [_programs addObject:program];
+            [weakSelf.programs addObject:program];
         }
+        
     }
     return _programs;
 }
