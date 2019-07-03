@@ -40,7 +40,7 @@
             if (i == 1 ) {
                 make.left.top.bottom.equalTo(weakSelf);
             }else{
-                make.left.equalTo(weakSelf.veriner.mas_right);
+                make.left.equalTo(weakSelf.veriner.mas_right).offset(3);
                 make.centerY.equalTo(weakSelf.veriner);
             }
             make.size.mas_equalTo(CGSizeMake(13, 18));

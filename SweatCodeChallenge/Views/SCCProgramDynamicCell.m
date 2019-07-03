@@ -39,7 +39,7 @@ static NSString *const IntensityCode = @"intensity";
     [super awakeFromNib];
     self.collectionView.alignment = TTGTagCollectionAlignmentFillByExpandingWidth;
     self.collectionView.enableTagSelection = NO;
-    self.collectionView.alignment = TTGTagCollectionAlignmentFillByExpandingWidthExceptLastLine;
+    self.collectionView.alignment = TTGTagCollectionAlignmentLeft;
     [self.frameView addShadowWithColor:SCC_BORDER_GRAY];
 }
 -(void)prepareForReuse{
@@ -72,7 +72,7 @@ static NSString *const IntensityCode = @"intensity";
             }else if(i == (program.attributes.count +1)){
                 make.bottom.equalTo(weakSelf.containerView.bottom);
             }else{
-                make.top.equalTo(weakSelf.vernier.mas_bottom).offset(5);
+                make.top.equalTo(weakSelf.vernier.mas_bottom).offset(7);
             }
             make.left.equalTo(weakSelf.containerView);
             make.right.equalTo(weakSelf.containerView);
@@ -96,8 +96,6 @@ static NSString *const IntensityCode = @"intensity";
     }
     return _tags;
 }
-
-
 
 -(TTGTextTagConfig *)config{
     if(!_config){

@@ -32,7 +32,7 @@
 }
     
 - (void)initProperties {
-    UIImageView *logoImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 105, 44)];
+    UIImageView *logoImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, -5, 100, 20)];
     logoImageView.contentMode = UIViewContentModeScaleAspectFit;
     logoImageView.image = [UIImage imageNamed:@"sweat-logo"];
     self.navigationItem.titleView = logoImageView;
