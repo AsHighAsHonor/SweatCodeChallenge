@@ -13,13 +13,11 @@
 @property(nonatomic, strong)NSMutableArray *drops;
 @property(nonatomic, strong)UIImageView *veriner;
 @property(nonatomic, strong)SCCAttribute *attr;
-
 @end
-
 
 @implementation DropsView
 
-- (instancetype)initWithDropValue:(SCCAttribute *)attr{
+- (instancetype)initWithDropValue:(SCCAttribute *)attr {
     self = [super init];
     if (self) {
         self.attr = attr;
@@ -28,7 +26,7 @@
     return self;
 }
 
--(void)setupSubviewWithDropValue:(SCCAttribute *)attr{
+- (void)setupSubviewWithDropValue:(SCCAttribute *)attr {
     __weak __typeof(self)weakSelf = self;
     for (NSInteger i = 1 ; i <=  attr.total.integerValue; i++) {
         UIImageView *image;
@@ -52,7 +50,5 @@
 
     }
 }
-
-
 
 @end

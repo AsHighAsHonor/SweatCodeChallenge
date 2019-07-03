@@ -8,18 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
-
-
 @interface UIView (Load)
+
 + (instancetype)loadFromNib;
 + (instancetype)loadFromNibWith:(CGRect)frame;
 + (UINib *)getNib;
 + (NSString *)reusedIdentifier;
 
 - (void)addShadowWithColor:(UIColor *)theColor;
--(void)addShadowPathWith:(UIColor *)shadowColor shadowOpacity:(CGFloat)shadowOpacity shadowRadius:(CGFloat)shadowRadius shadowPathWidth:(CGFloat)shadowPathWidth;
-@end
+- (void)addShadowPathWith:(UIColor *)shadowColor shadowOpacity:(CGFloat)shadowOpacity shadowRadius:(CGFloat)shadowRadius shadowPathWidth:(CGFloat)shadowPathWidth;
 
-NS_ASSUME_NONNULL_END
+@end

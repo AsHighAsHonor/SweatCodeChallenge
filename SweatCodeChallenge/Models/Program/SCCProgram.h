@@ -23,8 +23,7 @@
 @property (nonatomic, strong) SCCTrainer * trainer;
 @property (nonatomic, strong)NSMutableArray *tagNames;
 
-
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary;
-
 -(NSDictionary *)toDictionary;
+
 @end

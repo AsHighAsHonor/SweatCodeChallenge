@@ -19,7 +19,7 @@
 
 @implementation SCCAttributeView
 
-- (void)awakeFromNib{
+- (void)awakeFromNib {
     [super awakeFromNib];
     
     [self.progressView.layer setCornerRadius:4];
@@ -35,7 +35,7 @@
     self.nameLabel.textColor = SCC_TEXT_GRAY;
 }
 
--(void)setupAttribute:(SCCAttribute*)attribute{
+-(void)setupAttribute:(SCCAttribute*)attribute {
     self.nameLabel.text = attribute.name;
      self.progressView.progress = attribute.value.doubleValue / attribute.total.doubleValue;
 }

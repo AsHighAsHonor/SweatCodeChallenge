@@ -20,15 +20,10 @@ NSString *const kSCCAttributeValue = @"value";
 @end
 @implementation SCCAttribute
 
-
-
-
 /**
  * Instantiate the instance using the passed dictionary values to set the properties values
  */
-
--(instancetype)initWithDictionary:(NSDictionary *)dictionary
-{
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
 	self = [super init];
 	if(![dictionary[kSCCAttributeCodeName] isKindOfClass:[NSNull class]]){
 		self.codeName = dictionary[kSCCAttributeCodeName];
@@ -53,8 +48,7 @@ NSString *const kSCCAttributeValue = @"value";
 /**
  * Returns all the available property values in the form of NSDictionary object where the key is the approperiate json key and the value is the value of the corresponding property
  */
--(NSDictionary *)toDictionary
-{
+- (NSDictionary *)toDictionary {
 	NSMutableDictionary * dictionary = [NSMutableDictionary dictionary];
 	if(self.codeName != nil){
 		dictionary[kSCCAttributeCodeName] = self.codeName;
@@ -79,8 +73,7 @@ NSString *const kSCCAttributeValue = @"value";
 /**
  * Returns all the available property values in the form of NSDictionary object where the key is the approperiate json key and the value is the value of the corresponding property
  */
-- (void)encodeWithCoder:(NSCoder *)aCoder
-{
+- (void)encodeWithCoder:(NSCoder *)aCoder {
 	if(self.codeName != nil){
 		[aCoder encodeObject:self.codeName forKey:kSCCAttributeCodeName];
 	}
@@ -99,8 +92,7 @@ NSString *const kSCCAttributeValue = @"value";
 /**
  * Implementation of NSCoding initWithCoder: method
  */
-- (instancetype)initWithCoder:(NSCoder *)aDecoder
-{
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
 	self = [super init];
 	self.codeName = [aDecoder decodeObjectForKey:kSCCAttributeCodeName];
 	self.idField = [[aDecoder decodeObjectForKey:kSCCAttributeIdField] integerValue];
@@ -114,8 +106,7 @@ NSString *const kSCCAttributeValue = @"value";
 /**
  * Implementation of NSCopying copyWithZone: method
  */
-- (instancetype)copyWithZone:(NSZone *)zone
-{
+- (instancetype)copyWithZone:(NSZone *)zone {
 	SCCAttribute *copy = [SCCAttribute new];
 
 	copy.codeName = [self.codeName copy];
@@ -126,4 +117,5 @@ NSString *const kSCCAttributeValue = @"value";
 
 	return copy;
 }
+
 @end

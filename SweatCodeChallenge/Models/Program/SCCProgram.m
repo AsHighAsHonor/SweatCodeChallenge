@@ -19,15 +19,10 @@ NSString *const kSCCProgramTrainer = @"trainer";
 @end
 @implementation SCCProgram
 
-
-
-
 /**
  * Instantiate the instance using the passed dictionary values to set the properties values
  */
-
--(instancetype)initWithDictionary:(NSDictionary *)dictionary
-{
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
 	self = [super init];
 	if(![dictionary[kSCCProgramAcronym] isKindOfClass:[NSNull class]]){
 		self.acronym = dictionary[kSCCProgramAcronym];
@@ -75,8 +70,7 @@ NSString *const kSCCProgramTrainer = @"trainer";
 /**
  * Returns all the available property values in the form of NSDictionary object where the key is the approperiate json key and the value is the value of the corresponding property
  */
--(NSDictionary *)toDictionary
-{
+- (NSDictionary *)toDictionary {
 	NSMutableDictionary * dictionary = [NSMutableDictionary dictionary];
 	if(self.acronym != nil){
 		dictionary[kSCCProgramAcronym] = self.acronym;
@@ -118,8 +112,7 @@ NSString *const kSCCProgramTrainer = @"trainer";
 /**
  * Returns all the available property values in the form of NSDictionary object where the key is the approperiate json key and the value is the value of the corresponding property
  */
-- (void)encodeWithCoder:(NSCoder *)aCoder
-{
+- (void)encodeWithCoder:(NSCoder *)aCoder {
 	if(self.acronym != nil){
 		[aCoder encodeObject:self.acronym forKey:kSCCProgramAcronym];
 	}
@@ -147,8 +140,7 @@ NSString *const kSCCProgramTrainer = @"trainer";
 /**
  * Implementation of NSCoding initWithCoder: method
  */
-- (instancetype)initWithCoder:(NSCoder *)aDecoder
-{
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
 	self = [super init];
 	self.acronym = [aDecoder decodeObjectForKey:kSCCProgramAcronym];
 	self.attributes = [aDecoder decodeObjectForKey:kSCCProgramAttributes];
@@ -165,8 +157,7 @@ NSString *const kSCCProgramTrainer = @"trainer";
 /**
  * Implementation of NSCopying copyWithZone: method
  */
-- (instancetype)copyWithZone:(NSZone *)zone
-{
+- (instancetype)copyWithZone:(NSZone *)zone {
 	SCCProgram *copy = [SCCProgram new];
 
 	copy.acronym = [self.acronym copy];

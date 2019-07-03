@@ -15,6 +15,6 @@
 @property (nonatomic, strong) NSString * name;
 
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary;
-
 -(NSDictionary *)toDictionary;
+
 @end

@@ -8,11 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
 @class SCCAttribute;
 @interface DropsView : UIView
+
 - (instancetype)initWithDropValue:(SCCAttribute *)attr;
 
 @end
-
-NS_ASSUME_NONNULL_END
