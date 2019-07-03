@@ -24,9 +24,12 @@ static NSString *const IntensityCode = @"intensity";
 @property (weak, nonatomic) IBOutlet UILabel *programNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *trainerNameLabel;
 @property (weak, nonatomic) IBOutlet UIView *frameView;
-@property (nonatomic, strong) TTGTextTagCollectionView *collectionView;
+@property (nonatomic, strong) IBOutlet TTGTextTagCollectionView *collectionView;
 @property (nonatomic, strong) NSMutableArray <SCCTag *> *tags;
 @property (nonatomic, strong) TTGTextTagConfig *config;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *containerViewConstraint;
+@property (weak, nonatomic) IBOutlet UIView *containerView;
+
 @end
 
 
@@ -34,11 +37,15 @@ static NSString *const IntensityCode = @"intensity";
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    self.collectionView.alignment = TTGTagCollectionAlignmentFillByExpandingWidth;
+    self.collectionView.enableTagSelection = NO;
+    self.collectionView.alignment = TTGTagCollectionAlignmentFillByExpandingWidthExceptLastLine;
     [self.frameView addShadowWithColor:SCC_BORDER_GRAY];
 }
 -(void)prepareForReuse{
     [super prepareForReuse];
     self.vernier = nil;
+    [self.containerView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     [self.collectionView removeAllTags];
 }
 
@@ -46,58 +53,43 @@ static NSString *const IntensityCode = @"intensity";
 -(void)setupCell:(SCCProgram *)program{
     __weak __typeof(self)weakSelf = self;
     [self.trainerImageView sd_setImageWithURL:[NSURL URLWithString:program.trainer.imageUrl]];
-    
+    CGFloat height = 0;
     for (int i = 0 ; i< program.attributes.count; i++) {
         SCCAttribute * attr = program.attributes[i];
         UIView * temp;
         if ([attr.codeName isEqualToString:IntensityCode]){
             temp = [[DropsView alloc]initWithDropValue:attr];
+            height += 18;
         }else{
             temp  = SCCAttributeView.loadFromNib;
             [(SCCAttributeView* )temp setupAttribute: attr];
+            height += 35;
         }
-        
-        [self.contentView addSubview:temp];
+        [self.containerView addSubview:temp];
         [temp makeConstraints:^(MASConstraintMaker *make) {
             if (i == 0){
-                make.top.equalTo(weakSelf.trainerNameLabel.mas_bottom).offset(5);
+                make.top.equalTo(weakSelf.containerView);
+            }else if(i == (program.attributes.count +1)){
+                make.bottom.equalTo(weakSelf.containerView.bottom);
             }else{
                 make.top.equalTo(weakSelf.vernier.mas_bottom).offset(5);
             }
-            make.left.equalTo(weakSelf.contentView).offset(36);
-            make.right.equalTo(weakSelf.trainerImageView.mas_left).offset(0);
+            make.left.equalTo(weakSelf.containerView);
+            make.right.equalTo(weakSelf.containerView);
             
         }];
         //Vernier use for add constraint to next view
         self.vernier = temp;
     }
     
+    self.containerViewConstraint.constant = height;
     [self.collectionView addTags: program.tagNames withConfig:self.config];
+    [self.contentView setNeedsUpdateConstraints];
+    [self.contentView updateConstraintsIfNeeded];
 }
 
 
 #pragma mark - LazyProperty
-
--(TTGTextTagCollectionView *)collectionView{
-    if(!_collectionView){
-        __weak __typeof(self)weakSelf = self;
-        _collectionView  = [[TTGTextTagCollectionView alloc]initWithFrame:CGRectZero];
-        _collectionView.alignment = TTGTagCollectionAlignmentFillByExpandingWidth;
-        _collectionView.enableTagSelection = NO;
-        _collectionView.alignment = TTGTagCollectionAlignmentFillByExpandingWidthExceptLastLine;
-        [self.contentView addSubview:self.collectionView];
-        [self.collectionView makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(weakSelf.vernier.bottom).offset(15);
-            make.left.equalTo(weakSelf.contentView).offset(36);
-            make.bottom.equalTo(weakSelf.contentView.bottom).offset(-15);
-            make.right.equalTo(weakSelf.trainerImageView.left);
-        }];
-
-    }
-    return _collectionView;
-}
-
-
 -(NSMutableArray *)tags{
     if(!_tags){
         _tags  = [NSMutableArray array];
@@ -120,6 +112,7 @@ static NSString *const IntensityCode = @"intensity";
     }
     return _config;
 }
+
 
 
 @end

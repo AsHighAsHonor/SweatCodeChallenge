@@ -25,7 +25,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tB7-GL-moa">
-                        <rect key="frame" x="20" y="16" width="280" height="313.5"/>
+                        <rect key="frame" x="20" y="16" width="280" height="301.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BBG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bj4-kh-j3K">
@@ -41,35 +41,56 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6ak-cO-msk">
-                        <rect key="frame" x="150" y="50" width="140" height="260"/>
+                        <rect key="frame" x="150" y="50" width="140" height="245"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="260" id="bcC-EL-Scl"/>
+                            <constraint firstAttribute="height" constant="245" id="bcC-EL-Scl"/>
                             <constraint firstAttribute="width" constant="140" id="zNg-2B-Kle"/>
                         </constraints>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3L4-dl-O2t">
+                        <rect key="frame" x="36" y="75" width="114" height="156"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" priority="999" constant="156" id="pyX-Rp-50f"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R7f-LR-p9P" customClass="TTGTextTagCollectionView">
+                        <rect key="frame" x="36" y="251" width="114" height="50.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="YZq-Vu-1Ue" firstAttribute="leading" secondItem="Bj4-kh-j3K" secondAttribute="leading" id="3mR-eq-9jL"/>
+                    <constraint firstItem="3L4-dl-O2t" firstAttribute="top" secondItem="YZq-Vu-1Ue" secondAttribute="bottom" constant="8" id="5em-mk-ahk"/>
+                    <constraint firstItem="3L4-dl-O2t" firstAttribute="leading" secondItem="YZq-Vu-1Ue" secondAttribute="leading" id="8AC-WG-GY5"/>
                     <constraint firstItem="Bj4-kh-j3K" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="36" id="HsL-xH-FXe"/>
                     <constraint firstItem="YZq-Vu-1Ue" firstAttribute="top" secondItem="Bj4-kh-j3K" secondAttribute="bottom" id="I1F-8i-JGE"/>
                     <constraint firstAttribute="trailing" secondItem="tB7-GL-moa" secondAttribute="trailing" constant="20" id="IAm-Vd-eom"/>
+                    <constraint firstItem="R7f-LR-p9P" firstAttribute="top" secondItem="3L4-dl-O2t" secondAttribute="bottom" constant="20" id="Kbc-e5-niO"/>
+                    <constraint firstItem="R7f-LR-p9P" firstAttribute="leading" secondItem="3L4-dl-O2t" secondAttribute="leading" id="Qev-Fo-UGa"/>
                     <constraint firstItem="Bj4-kh-j3K" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="33" id="UjK-cQ-HZd"/>
-                    <constraint firstAttribute="bottom" secondItem="tB7-GL-moa" secondAttribute="bottom" id="XeT-A1-Ucb"/>
+                    <constraint firstAttribute="bottom" secondItem="tB7-GL-moa" secondAttribute="bottom" constant="12" id="XeT-A1-Ucb"/>
+                    <constraint firstItem="6ak-cO-msk" firstAttribute="leading" secondItem="R7f-LR-p9P" secondAttribute="trailing" id="hHj-d2-UGp"/>
                     <constraint firstItem="6ak-cO-msk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="50" id="hoP-Vm-P6Q"/>
                     <constraint firstAttribute="trailing" secondItem="6ak-cO-msk" secondAttribute="trailing" constant="30" id="l3O-w7-Usi"/>
                     <constraint firstItem="tB7-GL-moa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="p10-bz-GCs"/>
+                    <constraint firstAttribute="bottom" secondItem="R7f-LR-p9P" secondAttribute="bottom" constant="28" id="plc-ue-7GH"/>
+                    <constraint firstItem="6ak-cO-msk" firstAttribute="leading" secondItem="3L4-dl-O2t" secondAttribute="trailing" id="qPY-jV-pGc"/>
                     <constraint firstItem="tB7-GL-moa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="vcb-gh-V0V"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
+                <outlet property="collectionView" destination="R7f-LR-p9P" id="BsC-L6-VmO"/>
+                <outlet property="containerView" destination="3L4-dl-O2t" id="cW8-eX-out"/>
+                <outlet property="containerViewConstraint" destination="pyX-Rp-50f" id="77p-6P-6sW"/>
                 <outlet property="frameView" destination="tB7-GL-moa" id="yPQ-FQ-AiK"/>
                 <outlet property="programNameLabel" destination="Bj4-kh-j3K" id="a1C-3f-BDT"/>
                 <outlet property="trainerImageView" destination="6ak-cO-msk" id="vDM-q7-FEx"/>
                 <outlet property="trainerNameLabel" destination="YZq-Vu-1Ue" id="7KG-Y1-260"/>
             </connections>
-            <point key="canvasLocation" x="54" y="19"/>
+            <point key="canvasLocation" x="53.623188405797109" y="18.75"/>
         </tableViewCell>
     </objects>
 </document>
